@@ -1,0 +1,157 @@
+@font-face {
+    font-family: mario-font;
+    src: url(SuperMario256.ttf);
+ }
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: mario-font;
+}
+
+
+.game{
+    height: 100vh;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(#87ceeb, #e0f6ff);
+}
+.pipe{
+    position: absolute;
+    width: 15vh;
+    bottom: 12vh;
+    right: 0;
+    animation: pipeani 1.5s infinite linear;
+}
+
+.mario{
+    width: 7vh;
+    bottom: 13vh;
+    position: absolute;
+    left: 7vh;
+    
+    
+}
+
+.jump{
+    animation: marioani 600ms ease-in-out;
+    
+}
+
+.clouds{
+    width: 60vh;
+    margin-top: 6vh;
+    position: absolute;
+    animation: cloudsani 10s infinite linear;
+}
+
+.score{
+    position: fixed;
+    display: flex;
+    align-items: center;
+    line-height: 5px;
+    font-size: 15px;
+    color: #131313;
+    justify-content: center;
+    text-align: center;
+    top: 6vh;
+    right: 10vh;
+    height: 5vh;
+    
+}
+
+.grama{
+    position: absolute;
+    bottom: 0;
+    width: 300vh;
+    animation: gramaani 1.06s linear infinite;
+}
+
+.restart{
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    font-size: 40px;
+    margin: 30% 0;
+        
+}
+
+.reload{
+    display: flex;
+    color: #131313;
+    padding: 2%;
+    border: #131313 4px solid;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 3%;
+    font-size: 30%;
+    cursor: pointer;
+}
+
+.reload:hover{
+    background: #131313;
+    color: #ffffff;
+}
+
+.scorefinal{
+    font-size: 15px;
+}
+
+@keyframes pipeani{
+    from{
+        right: -15%;
+    }
+
+    to{
+        right:110%
+    }
+}
+
+@keyframes marioani{
+    0%{
+        bottom: 13vh;
+    }
+
+    40%{
+        bottom: 32vh;
+    }
+
+    50%{
+        bottom: 32vh;
+    }
+
+    60%{
+        bottom: 32vh;
+    }
+
+    100%{
+        bottom: 13vh;
+    }
+}
+
+@keyframes overani{
+    100% {
+        bottom: -10vh;
+    }
+}
+
+@keyframes cloudsani{
+    from{
+        right: -70vh;
+    }
+
+    to{
+        right: 100%;
+    }
+}
+
+@keyframes gramaani{
+    from{
+        right: -89%;
+    }
+
+    to{
+        right: 0%;
+    }
+}
