@@ -52,7 +52,7 @@ const loop = setInterval(() => {
     const cloudsPos = clouds.offsetLeft;
 
       
-    if (pipePos <= 65 && pipePos > 10 && marioPos <= 100) {
+    if (pipePos <= 65 && pipePos > 10 && marioPos <= 150) {
 
         pipe.style.animation = 'none';
         pipe.style.left = pipePos + 'px';
